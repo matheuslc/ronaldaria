@@ -3,7 +3,7 @@ package main.java.Item;
 public class Book extends Item {
     private String author;
 
-    public Book(String title, int code, String publishedDate, int edition) {
+    public Book(String title, int code, String publishedDate, int edition, String author) {
         super(title, code, publishedDate, edition);
         this.setAuthor(author);
     }
