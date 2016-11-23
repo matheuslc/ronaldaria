@@ -1,4 +1,4 @@
-package main.java.Item;
+package Item;
 
 public abstract class Item {
     private String title;

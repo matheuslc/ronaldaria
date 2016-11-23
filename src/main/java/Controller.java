@@ -1,6 +1,4 @@
-package main.java;
-
-import main.java.Menu.Menu;
+import Menu.Menu;
 
 import java.util.Scanner;
 

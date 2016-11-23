@@ -1,4 +1,4 @@
-package main.java.Item;
+package Item;
 
 public class Magazine extends Item {
     public Magazine(String title, int code, String publishedDate, int edition) {

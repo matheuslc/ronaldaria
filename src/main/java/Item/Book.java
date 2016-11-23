@@ -1,4 +1,4 @@
-package main.java.Item;
+package Item;
 
 public class Book extends Item {
     private String author;

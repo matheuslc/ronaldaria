@@ -1,4 +1,4 @@
-package main.java.User;
+package User;
 
 public class User {
     private int id;

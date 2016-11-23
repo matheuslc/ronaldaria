@@ -1,6 +1,6 @@
-package main.java.Library;
+package Library;
 
-import main.java.Item.Item;
+import Item.Item;
 
 public class BookStorage {
     Item items[];

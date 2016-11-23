@@ -1,8 +1,8 @@
-package main.java.Menu;
+package Menu;
 
 import java.util.Scanner;
-import main.java.Item.Book;
-import main.java.Item.Magazine;
+import Item.Book;
+import Item.Magazine;
 
 public class Menu {
     public void createMenu() {
