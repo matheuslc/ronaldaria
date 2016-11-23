@@ -1,3 +1,4 @@
+package main.java.Item;
 
 public abstract class Item {
     private String title;
@@ -5,6 +6,13 @@ public abstract class Item {
     private String publishedDate;
     private int edition;
     private boolean allocated;
+
+    public Item(String title, int code, String publishedDate, int edition) {
+        this.title = title;
+        this.code = code;
+        this.publishedDate = publishedDate;
+        this.edition = edition;
+    }
 
     public String getTitle() {
         return title;
