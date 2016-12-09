@@ -5,8 +5,6 @@ public class UserRepository {
     private int index = 0;
 
     public User getUser(String userName) throws Error {
-        System.out.println(userName);
-
         for (int i = 0; i < this.index; i++) {
             if (this.users[i].getUserName().equals(userName)) {
                 return this.users[i];

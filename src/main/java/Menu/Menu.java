@@ -25,8 +25,24 @@ public class Menu {
         System.out.println("6 - Cadastrar revista");
         System.out.println("7 - Locar revista");
         System.out.println("8 - Devolver revista");
-        System.out.println("6 - Ver se um item já está locado");
+        System.out.println("10 - Ver se um item já está locado");
         System.out.println("9 - Listar itens");
+    }
+
+    public void delocate() {
+        Scanner scanner = new Scanner(System.in);
+        int code;
+
+        System.out.println("Qual o código do item?");
+        code = scanner.nextInt();
+
+        try {
+            Item item = this.bookStorage.getItem(code);
+            this.bookStorage.delocate(item);
+        } catch (Error error) {
+            System.out.println(error);
+        }
+
     }
 
     public void execute(int option) {
@@ -43,8 +59,14 @@ public class Menu {
             case 6:
                 this.createMagazine();
                 break;
+            case 5:
+                this.delocate();
+                break;
             case 9:
                 this.listItems();
+                break;
+            case 10:
+                this.isItemLocated();
                 break;
         }
     }
@@ -74,8 +96,27 @@ public class Menu {
 
         } catch (Error error) {
             System.out.println(error);
+        }
+    }
 
-            this.locate();
+    public void isItemLocated() {
+        Scanner scanner = new Scanner(System.in);
+        int code;
+
+        System.out.println("Qual o código do item?");
+        code = scanner.nextInt();
+
+        try {
+            Item item = this.bookStorage.getItem(code);
+
+            if (item.isLocated()) {
+                System.out.println("O livro já está locado");
+            } else {
+                System.out.println("O livro está disponível");
+            }
+
+        } catch (Error error) {
+            System.out.println(error);
         }
     }
 
@@ -100,7 +141,7 @@ public class Menu {
         System.out.println("Qual a senha?");
         password = scanner.nextLine();
 
-        System.out.println("Qual o tipo de usuário? admin, client");
+        System.out.println("Qual o tipo de usuário? admin, user");
         type = scanner.nextLine();
 
         User user = new User(name, bornDate, password, type, username);

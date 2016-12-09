@@ -1,7 +1,6 @@
 package main.java.User;
 
 public class User {
-    private int id;
     private String name;
     private String bornDate;
     private String password;
@@ -46,10 +45,6 @@ public class User {
 
     public String getType() {
         return this.type;
-    }
-
-    public int getId() {
-        return this.id;
     }
 
     public void setUserName(String userName) {
