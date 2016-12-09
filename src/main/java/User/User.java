@@ -5,6 +5,16 @@ public class User {
     private String name;
     private String bornDate;
     private String password;
+    public String type;
+    public String userName;
+
+    public User(String name, String bornDate, String password, String type, String username) {
+        this.setName(name);
+        this.setBornDate(bornDate);
+        this.setPassword(password);
+        this.setType(type);
+        this.setUserName(username);
+    }
 
     public String getName() {
         return name;
@@ -28,5 +38,25 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return this.type;
+    }
+
+    public int getId() {
+        return this.id;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getUserName() {
+        return this.userName;
     }
 }

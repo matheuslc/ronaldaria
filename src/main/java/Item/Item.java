@@ -1,11 +1,15 @@
 package main.java.Item;
 
+import main.java.User.User;
+
 public abstract class Item {
     private String title;
     private int code;
     private String publishedDate;
     private int edition;
     private boolean allocated;
+    private User locatedUser;
+    private boolean isLocated = false;
 
     public Item(String title, int code, String publishedDate, int edition) {
         this.title = title;
@@ -52,5 +56,25 @@ public abstract class Item {
 
     public void setAllocated(boolean allocated) {
         this.allocated = allocated;
+    }
+
+    public void setLocatedUser(User user) {
+        this.locatedUser = user;
+    }
+
+    public User getLocatedUser() {
+        return this.locatedUser;
+    }
+
+    public void locate() {
+       this.isLocated = true;
+    }
+
+    public void dealocate() {
+        this.isLocated = false;
+    }
+
+    public boolean isLocated() {
+        return this.isLocated;
     }
 }
